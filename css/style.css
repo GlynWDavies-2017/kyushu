@@ -4,25 +4,140 @@
 }
 
 body * {
+  color: #c9c1ac;
   font-family: "MrDafoe-Regular", cursive;
 }
+
+/* Social Media Section Container */
 
 .info {
   background: #c9c1ac;
 }
 
+/* Social Media Icons and Address */
+
 .primary-color {
   color: #d3325f;
 }
+
+/* Address */
 
 .info h2 {
   word-spacing: 0.6rem;
 }
 
+/* Social Media Icons */
+
 .info a {
   transition: color 2s ease-in-out;
 }
 
+/* Social Media Icons */
+
 .info a:hover {
   color: #242424;
+}
+
+/* Header Section */
+
+/* Background Image */
+
+#header {
+  background: linear-gradient(RGBA(0, 0, 0, 0.5), RGBA(0, 0, 0, 0.5)),url("../images/banner-bcg.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: calc(100vh - 94px);
+  position: relative;
+}
+
+.height-90 {
+  min-height: calc(100vh - 94px);
+}
+
+.banner h1 {
+  animation: fromLeft;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-duration: 4s;
+  border-bottom: 6px dotted #c9c1ac;
+  border-top: 6px dotted #c9c1ac;
+  opacity: 0;
+}
+
+@keyframes fromLeft {
+  0%{
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  50%{
+    transform: translateX(30px);
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.main-btn {
+  border: 2px solid #d3325f;
+  color: #d3325f;
+  font-size: 2rem;
+  transition: all 1s ease-in-out;
+}
+
+.main-btn:hover {
+  background: #c9c1ac;
+  border: 2px solid #c9c1ac;
+  color: #242424;
+}
+
+.sushi-btn {
+  animation: fromRight;
+  animation-delay: 2s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fromRight {
+  0%{
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  50%{
+    transform: translateX(-30px);
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.header-link {
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-name: fromBottom;
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
+  bottom: 5%;
+  color: #242424;
+  display: inline-block;
+  left: 50%;
+  position: absolute;
+  transition: all 2x ease;
+}
+
+@keyframes fromBottom {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
